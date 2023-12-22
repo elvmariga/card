@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .description {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-container:hover .image {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-container:hover .description {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="w-11/12 mx-auto">
+    <div class="card my-4 border max-w-sm overflow-hidden">
+        <div class="cardTitle flex justify-center items-center gap-2 p-4 border-b-2 mb-18">
+            <div>
+            <svg width="24" height="24" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+                <mask id="mask0_205_118" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="34" width="9" height="4">
+                    <path d="M11.4166 34.1406H19.4166V37.7396H11.4166V34.1406Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_205_118)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5885 34.927H18.2395V37.0885H12.5885V34.927Z"
+                        fill="#80BC01" />
+                </g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.4166 32.1719C13.6145 32.1719 11.8854 31.8854 10.2604 31.3594V32.6667C10.2604 33.1823 10.677 33.599 11.1927 33.599H19.6302C20.1458 33.599 20.5677 33.1823 20.5677 32.6667V31.3594C18.9427 31.8854 17.2135 32.1719 15.4166 32.1719Z"
+                    fill="#80BC01" />
+                <mask id="mask1_205_118" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="31" height="32">
+                    <path d="M0 0H30.9687V31.474H0V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask1_205_118)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 15.4272C0 23.9272 6.91146 30.8438 15.4167 30.8438C23.9167 30.8438 30.8281 23.9272 30.8281 15.4272C30.8281 6.92716 23.9167 0.010498 15.4167 0.010498C6.91146 0.010498 0 6.92716 0 15.4272ZM15.4167 27.9115C8.53125 27.9115 2.93229 22.3074 2.93229 15.4272C2.93229 8.54175 8.53125 2.94279 15.4167 2.94279C22.2969 2.94279 27.8958 8.54696 27.8958 15.4272C27.8958 22.3074 22.2969 27.9115 15.4167 27.9115Z"
+                        fill="#80BC01" />
+                </g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.26038 15.4269C4.26038 21.578 9.26558 26.578 15.4166 26.578C21.5625 26.578 26.5677 21.578 26.5677 15.4269C26.5677 9.27588 21.5625 4.27588 15.4166 4.27588C9.26558 4.27067 4.26038 9.27588 4.26038 15.4269ZM12.9427 16.9634C12.9427 18.1769 11.9531 19.1613 10.7448 19.1613H8.03121C7.66142 19.1613 7.36454 18.8644 7.36454 18.4946V12.3488C7.36454 11.9842 7.66142 11.6873 8.03121 11.6873H9.97913C11.6875 11.6873 12.5781 12.7915 12.5781 13.8853C12.5781 14.3748 12.401 14.8436 12.0885 15.2186C12.6041 15.6248 12.9427 16.2551 12.9427 16.9634ZM20.6198 19.1613H18.5312C18.1666 19.1613 17.8698 18.8644 17.8698 18.4998V12.354C17.8698 11.9842 18.1666 11.6873 18.5312 11.6873H20.6198C22.2916 11.6873 23.4635 13.2238 23.4635 15.4269C23.4635 16.354 23.2343 17.229 22.8177 17.8905C22.302 18.7134 21.5208 19.1613 20.6198 19.1613ZM16.6302 19.1613H14.177C13.8125 19.1613 13.5156 18.8644 13.5156 18.4998C13.5156 18.1301 13.8125 17.8332 14.177 17.8332H14.7395V13.0207H14.177C13.8125 13.0207 13.5156 12.7186 13.5156 12.354C13.5156 11.9842 13.8125 11.6873 14.177 11.6873H16.6302C16.9948 11.6873 17.2916 11.9842 17.2916 12.354C17.2916 12.7186 16.9948 13.0207 16.6302 13.0207H16.0677V17.8332H16.6302C16.9948 17.8332 17.2916 18.1301 17.2916 18.4998C17.2968 18.8644 17 19.1613 16.6302 19.1613Z"
+                    fill="#80BC01" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.1979 13.0208V17.8333H20.6198C21.0677 17.8333 21.4166 17.6198 21.6927 17.1823C21.9739 16.7396 22.1354 16.099 22.1354 15.4271C22.1354 14.4583 21.7343 13.0156 20.625 13.0156L19.1979 13.0208Z"
+                    fill="#80BC01" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.69263 13.0208V14.7603H9.97909C10.4114 14.7603 10.7603 14.6562 10.9843 14.453C11.1562 14.302 11.2499 14.0989 11.2499 13.8905C11.2499 13.4583 10.8541 13.0208 9.97909 13.0208H8.69263Z"
+                    fill="#80BC01" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.69263 16.0884V17.8332H10.7395C11.2239 17.8332 11.6145 17.4425 11.6145 16.9634C11.6145 16.479 11.2239 16.0884 10.7395 16.0884H8.69263Z"
+                    fill="#80BC01" />
+            
+            </svg>
+            </div>
+            <h3>UI/UX Design</h3>
+        </div>
+        <div class="group hover-container relative">
+            <div class="image">
+                <img src="./3.png" alt="card image">
+            </div>
+            <div class="description absolute top-0 left-0 right-0 bottom-0 p-4">
+                <p class="mx-auto w-11/12">
+                    Transform your digital experience with our cutting-edge UI/UX design services. At [Your Company
+                    Name], we
+                    specialize
+                    in creating user-centric interfaces that not only captivate your audience but also enhance usability
+                    and
+                    functionality.
+
+                    Whether you're launching a new product or revamping an existing platform, our UI/UX experts are here
+                    to
+                    elevate your
+                    brand. We focus on understanding your users' needs, incorporating the latest design trends, and
+                    optimizing
+                    the
+                    overall user experience for maximum impact.
+
+                    Discover the difference great design can make — because exceptional user experiences lead to
+                    satisfied
+                    users and
+                    business success.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+     
+        const hoverContainer = document.querySelector('.hover-container');
+        hoverContainer.addEventListener('mouseenter', () => {
+            document.querySelector('.image').style.opacity = 0;
+        });
+        hoverContainer.addEventListener('mouseleave', () => {
+            document.querySelector('.image').style.opacity = 1;
+        });
+    </script>
+</body>
+
+</html>
